@@ -174,3 +174,62 @@ This project includes several enhancements to improve user experience and mainta
   - `templates` – layout skeletons for pages
 
 These features collectively enhance the development experience, scalability, and user interface flexibility.
+
+## 📌 Notes on Next.js 15 & React 19
+
+This project is built using **Next.js 15** and **React 19**, which come with significant improvements to performance, developer experience, and caching predictability.
+
+### 🔄 Full Support for React 19
+
+- **New React hooks:**
+  - `useActionState` – manage async state during actions (e.g. form submissions)
+  - `useFormStatus` – track real-time submission state of forms
+  - `useOptimistic` – update UI optimistically before server confirms
+
+---
+
+### ⚙️ Major Next.js 15 Updates
+
+#### ✅ New Features
+
+- **`<Form>` Component**:
+  - Enhanced progressive enhancement for forms
+  - Built-in prefetching and client-side navigation
+- **TypeScript support in `next.config.ts`**
+- **Turbopack** enabled by default in development for faster startup and refresh
+- **Instrumentation API** is now stable for performance monitoring
+- **Static Route Indicators** now help visualize static routes in dev
+
+---
+
+#### 🧠 Updated Caching Strategy (Breaking Change)
+
+- **Caching is no longer enabled by default**
+
+  - `fetch()` now uses `cache: 'no-store'` unless explicitly configured
+  - **You must now manually opt-in to caching**:
+    ```ts
+    // Opt-in caching example
+    const res = await fetch("https://api.example.com/data", {
+      cache: "force-cache",
+    });
+    ```
+
+- **Client-side route navigation** no longer caches route components
+  - This ensures fresh data during in-app navigation
+  - You can customize stale times in `next.config.js`:
+    ```ts
+    // next.config.ts
+    export default {
+      experimental: {
+        staleTimes: {
+          dynamic: 30, // seconds
+          static: 180,
+        },
+      },
+    };
+    ```
+
+---
+
+These updates improve predictability, reduce unintended stale data, and empower you with more control over performance and freshness.
