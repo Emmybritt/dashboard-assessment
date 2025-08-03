@@ -1,95 +1,93 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Box, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
+import LoremData from "./components/molecules/LoremData";
+import LoremPComponent from "./components/molecules/LoremPComponent";
+import LoremTaskSection from "./components/molecules/LoremTaskSection";
+import LoremChart from "./components/molecules/LoremChart";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <Box as="main" p={2} maxW="container.xl" mx="auto">
+      <Grid
+        templateColumns={{
+          base: "1fr",
+          xl: "1fr 2fr",
+        }}
+        gap={6}
+        minH="calc(100vh - 120px)"
+      >
+        <GridItem
+          as="article"
+          bg="cardbg"
+          borderRadius="xl"
+          p={6}
+          boxShadow="sm"
+          height={"90vh"}
+          minWidth={80}
+          overflowY={"auto"}
+          divideY="1px"
+          divideColor="border"
+        >
+          <Box mb={5}>
+            <Box mb={6}>
+              <Heading
+                as="h2"
+                size="lg"
+                mb={4}
+                color="success"
+                fontSize="1.25rem"
+                lineHeight="1.75rem"
+              >
+                Description
+              </Heading>
+              <Text color="text" fontSize="14px" lineHeight="1.6">
+                Lorem ipsum dolor sit amet consectetur. Aenean sodales
+                pellentesque gravida nibh et magna faucibus. Dui commodo ut
+                metus amet egestas habitant viverra. Quisque fusce senectus
+                facilisis non diam leo nulla sem pellentesque. Sit in vel sed
+                cursus metus sit fringilla vestibulum.
+              </Text>
+            </Box>
+            <Box>
+              <Heading
+                as="h2"
+                size="lg"
+                mb={4}
+                color="success"
+                fontSize="1.25rem"
+                lineHeight="1.75rem"
+              >
+                Extra
+              </Heading>
+              <Text color="text" fontSize="14px" lineHeight="1.6">
+                Lorem ipsum dolor sit amet consectetur. Tempus a id adipiscing
+                fames egestas tellus dis pretium tempus. Justo nisl nisl lorem
+                lectus id ornare. Rhoncus in egestas in amet porttitor
+                pellentesque sit. Amet gravida integer velit felis. Eu
+                consectetur interdum auctor sed aliquam. Eu pulvinar accumsan
+                sed id. Duis a aliquam eu quisque commodo lectus. Lectus ipsum
+                velit purus viverra vulputate viverra in nunc nulla. Euismod
+                rhoncus mauris urna orci gravida sagittis netus. Amet mus in vel
+                etiam. Interdum habitant congue massa in etiam sit. Commodo nibh
+                viverra lobortis augue lorem quam lorem suspendisse.
+              </Text>
+            </Box>
+          </Box>
+          <LoremData />
+          <LoremPComponent />
+        </GridItem>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <GridItem
+          as="article"
+          bg="cardbg"
+          borderRadius="xl"
+          p={6}
+          boxShadow="sm"
+          minH="400px"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <LoremChart />
+          <LoremTaskSection />
+        </GridItem>
+      </Grid>
+    </Box>
   );
 }

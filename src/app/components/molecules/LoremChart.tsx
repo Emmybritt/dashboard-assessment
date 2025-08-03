@@ -1,0 +1,56 @@
+"use client";
+import { loremImg, loremTreeNode } from "@/app/datas/dummydatas";
+import {
+  Box,
+  Flex,
+  For,
+  Grid,
+  Heading,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import Image from "next/image";
+import { css } from "../../../../styled-system/css";
+import { Tree } from "./Tree";
+
+const LoremChart = () => {
+  const ml = useBreakpointValue({
+    base: "30px",
+    sm: "30px",
+    md: "40px",
+    lg: "50px",
+    xl: "60px",
+  });
+
+  return (
+    <Box>
+      <Heading as="h2" mb={3} color="success">
+        Lorem Lorem Lorem
+      </Heading>
+      <Grid width="100%" rounded={20} p={2} bg="gridCard">
+        <Box
+          maxWidth={"100%"}
+          overflowX="scroll"
+          p={2}
+          m={"auto"}
+          borderBottomWidth={1}
+          className={css({
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          })}
+        >
+          <Tree node={loremTreeNode} />
+        </Box>
+        <Flex mt={2}>
+          <For each={loremImg}>
+            {(img, i) => (
+              <Image alt={img} key={i} src={img} height={38} width={105} />
+            )}
+          </For>
+        </Flex>
+      </Grid>
+    </Box>
+  );
+};
+
+export default LoremChart;

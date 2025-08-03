@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Provider } from "@/components/ui/provider";
+import { Box, Flex, VisuallyHidden } from "@chakra-ui/react";
+import { Sidebar } from "./components/organisms/Sidebar";
+import { css } from "../../styled-system/css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,9 +27,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning style={{ height: "100%" }}>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <Provider>
+          <Flex>
+            <VisuallyHidden>
+              <a href="#main-content">Skip to main content</a>
+            </VisuallyHidden>
+            <Sidebar />
+            <Box
+              as="main"
+              height={"100vh"}
+              position="relative"
+              overflowY={"auto"}
+              id="main-content"
+              flex="1"
+              className={css({ padding: { base: "4px", md: "12px" } })}
+            >
+              {children}
+            </Box>
+          </Flex>
+        </Provider>
       </body>
     </html>
   );
