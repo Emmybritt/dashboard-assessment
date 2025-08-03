@@ -77,7 +77,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Project Structure
 
-This project uses an atomic design, below you will see more informations about the atomic design principles
+This project uses an atomic design principles, below you will see more informations about the atomic design principles
 
 ```bash
 src/
@@ -101,4 +101,18 @@ src/
 ├── tsconfig.json           # TypeScript configuration
 ├── package.json            # Project metadata and scripts
 └── README.md               # Project documentation (you are here)
+```
+
+### 📐 Atomic Design in Practice
+
+In Atomic design components folder are structured based on the Atomic Design methodology:
+
+```bash
+| Layer         | Description                                    | Example                         |
+| ------------- | ---------------------------------------------- | ------------------------------- |
+| **Atoms**     | Basic building blocks (e.g., `Button`, `Text`) | `Button.tsx`, `Heading.tsx`     |
+| **Molecules** | Combination of atoms (e.g., `SearchBar`)       | `FormField.tsx`, `NavItem.tsx`  |
+| **Organisms** | Complex sections (e.g., `Sidebar`, `Header`)   | `Sidebar.tsx`, `Footer.tsx`     |
+| **Templates** | Page skeletons using organisms (optional)      | `DashboardTemplate.tsx`         |
+| **Pages**     | Route-level content (optional override)        | `HomePage.tsx`, `AboutPage.tsx` |
 ```
