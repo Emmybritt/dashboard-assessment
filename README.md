@@ -67,13 +67,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Development Ecosystem
 
-| Category   | Tools                       |
-| ---------- | --------------------------- |
-| Styling    | Panda CSS, Chakra UI        |
-| Routing    | Next.js File-system Routing |
-| Linting    | ESLint + TypeScript ESLint  |
-| Formatting | Prettier                    |
-| Git Hooks  | Husky + lint-staged         |
+| Category        | Tools                       |
+| --------------- | --------------------------- |
+| Language        | **TypeScript**              |
+| Package Manager | **pnpm** (preferred)        |
+| Styling         | Panda CSS, Chakra UI        |
+| Routing         | Next.js File-system Routing |
+| Linting         | ESLint + TypeScript ESLint  |
+| Formatting      | Prettier                    |
+| Git Hooks       | Husky + lint-staged         |
 
 ### Project Structure
 
