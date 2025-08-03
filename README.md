@@ -79,24 +79,26 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This project uses an atomic design, below you will see more informations about the atomic design principles
 
+```bash
 src/
 ├── app/
-│ ├── components/ # UI components (Atomic Design structure)
-│ │ ├── atoms/ # Smallest reusable UI parts (e.g., buttons, icons)
-│ │ ├── molecules/ # Group of atoms forming a small section
-│ │ ├── organisms/ # Sections composed of molecules (e.g., Sidebar)
-│ │ ├── templates/ # Page-level layouts using multiple organisms
-│ │ └── pages/ # Page-specific UI or entry points
-│ │
-│ ├── datas/ # Static data files, constants, mock data
-│ ├── types/ # Global TypeScript type definitions and interfaces
-│ └── (route files) # Next.js routing with file-based structure
+│   ├── components/         # UI components (Atomic Design structure)
+│   │   ├── atoms/          # Smallest reusable UI parts (e.g., buttons, icons)
+│   │   ├── molecules/      # Group of atoms forming a small section
+│   │   ├── organisms/      # Sections composed of molecules (e.g., Sidebar)
+│   │   ├── templates/      # Page-level layouts using multiple organisms
+│   │   └── pages/          # Page-specific UI or entry points
+│   │
+│   ├── datas/              # Static data files, constants, mock data
+│   ├── types/              # Global TypeScript type definitions and interfaces
+│   └── (route files)       # Next.js routing with file-based structure
 │
-├── public/ # Static assets (images, favicons, etc.)
-├── .eslintrc.js # ESLint configuration
-├── .prettierrc # Prettier formatting rules
-├── .env.local # Local environment variables
-├── next.config.js # Next.js custom configuration
-├── tsconfig.json # TypeScript configuration
-├── package.json # Project metadata and scripts
-└── README.md # Project documentation (you are here)
+├── public/                 # Static assets (images, favicons, etc.)
+├── .eslintrc.js            # ESLint configuration
+├── .prettierrc             # Prettier formatting rules
+├── .env.local              # Local environment variables
+├── next.config.js          # Next.js custom configuration
+├── tsconfig.json           # TypeScript configuration
+├── package.json            # Project metadata and scripts
+└── README.md               # Project documentation (you are here)
+```
