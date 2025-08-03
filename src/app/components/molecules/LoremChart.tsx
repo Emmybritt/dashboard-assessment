@@ -5,22 +5,13 @@ import {
   Flex,
   For,
   Grid,
-  Heading,
-  useBreakpointValue,
+  Heading
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { css } from "../../../../styled-system/css";
 import { Tree } from "./Tree";
 
 const LoremChart = () => {
-  const ml = useBreakpointValue({
-    base: "30px",
-    sm: "30px",
-    md: "40px",
-    lg: "50px",
-    xl: "60px",
-  });
-
   return (
     <Box>
       <Heading as="h2" mb={3} color="success">

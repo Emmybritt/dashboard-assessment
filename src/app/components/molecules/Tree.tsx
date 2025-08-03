@@ -8,7 +8,7 @@ interface TreeProps {
   isLast?: boolean;
 }
 
-export const Tree = ({ node, level = 0, isLast = false }: TreeProps) => {
+export const Tree = ({ node, level = 0 }: TreeProps) => {
   const hasChildren = node.children && node.children.length > 0;
 
   return (

@@ -1,6 +1,5 @@
 import { lorempData } from "@/app/datas/dummydatas";
-import { Box, Card, For, Heading } from "@chakra-ui/react";
-import React from "react";
+import { Box, For, Heading } from "@chakra-ui/react";
 import { LorempCard } from "../atoms/LoremPCard";
 
 const LoremPComponent = () => {

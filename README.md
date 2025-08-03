@@ -5,11 +5,11 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+pnpm dev
+# or
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
 # or
 bun dev
 ```
@@ -75,7 +75,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 | Routing         | Next.js File-system Routing |
 | Linting         | ESLint + TypeScript ESLint  |
 | Formatting      | Prettier                    |
-| Git Hooks       | Husky + lint-staged         |
 
 ### Project Structure
 
@@ -118,3 +117,60 @@ In Atomic design components folder are structured based on the Atomic Design met
 | **Templates** | Page skeletons using organisms (optional)      | `DashboardTemplate.tsx`         |
 | **Pages**     | Route-level content (optional override)        | `HomePage.tsx`, `AboutPage.tsx` |
 ```
+
+## 🛠 Optimization & Performance
+
+This project integrates modern react optimization techniques to ensure high performance, maintainability, and fast user experiences:
+
+- ⚛️ **React Compiler (React 19)**  
+  Automatically tracks reactive dependencies and memoizes components without requiring `useMemo`, `useCallback`, or `memo`.  
+  **Benefits:**
+
+  - Reduces unnecessary re-renders
+  - Simplifies code
+  - Improves rendering performance automatically
+
+- 📦 **Atomic CSS with Panda CSS**  
+  Generates minimal, zero-runtime CSS using design tokens and utility patterns.  
+  **Benefits:**
+
+  - Reduces bundle size
+  - Improves initial load performance
+  - Eliminates unused CSS
+
+- 🎨 **Semantic Tokens for Theming**  
+  Uses Chakra UI and Panda CSS tokens for consistent dark/light mode styles.  
+  **Benefits:**
+
+  - Centralized design decisions
+  - Fewer style overrides
+  - Improved theme scalability
+
+  - **Image Optimization:** As part of optimization, I used the _next/image_ component to render images. This component by default provides a fallback UI while waiting for the images to load: thus also eliminating the Cumulative Layout Effect.
+
+  - **Font Optimization:** This project uses [`next/font`](https://nextjs.org/docs/app/getting-started/fonts) to automatically optimize and load Inter, a custom Google Font.
+
+### 🎁 Bonus Features
+
+This project includes several enhancements to improve user experience and maintainability:
+
+- 🌗 **Dark and Light Mode Toggle**  
+  Implemented dark and light mode toggle using Chakra UI’s color mode system.  
+  Semantic tokens are managed via Panda CSS for consistent theming.
+
+- 📱 **Fully Responsive Dashboard Layout**  
+  Adapts seamlessly across mobile, tablet, and desktop breakpoints using Chakra UI’s responsive system.
+
+- 🧭 **Collapsible Sidebar Navigation**
+
+  - **Mobile:** Sidebar fully opens and closes using a toggle button.
+  - **Desktop:** Sidebar supports **partial collapse**, displaying only icons when closed — maximizing screen space while maintaining usability.
+
+- 🧠 **Atomic Design Architecture**
+  Components are structured using Atomic Design principles:
+  - `atoms` – base components like `Button`, `Icon`
+  - `molecules` – combinations like `FormField`
+  - `organisms` – full sections like `Sidebar`, `Header`
+  - `templates` – layout skeletons for pages
+
+These features collectively enhance the development experience, scalability, and user interface flexibility.
