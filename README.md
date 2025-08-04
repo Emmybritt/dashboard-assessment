@@ -139,16 +139,16 @@ This project integrates modern react optimization techniques to ensure high perf
   - Eliminates unused CSS
 
 - 🎨 **Semantic Tokens for Theming**  
-  Uses Chakra UI and Panda CSS tokens for consistent dark/light mode styles.  
+  I used Chakra UI and Panda CSS tokens for consistent dark/light mode styles.  
   **Benefits:**
 
   - Centralized design decisions
   - Fewer style overrides
   - Improved theme scalability
 
-  - **Image Optimization:** As part of optimization, I used the _next/image_ component to render images. This component by default provides a fallback UI while waiting for the images to load: thus also eliminating the Cumulative Layout Effect.
+- **Image Optimization:** As part of optimization, I used the _next/image_ component to render images. This component by default provides a fallback UI while waiting for the images to load: thus also eliminating the Cumulative Layout Effect.
 
-  - **Font Optimization:** This project uses [`next/font`](https://nextjs.org/docs/app/getting-started/fonts) to automatically optimize and load Inter, a custom Google Font.
+- **Font Optimization:** This project uses [`next/font`](https://nextjs.org/docs/app/getting-started/fonts) to automatically optimize and load geist-sans font, a custom Google Font.
 
 ### 🎁 Bonus Features
 
