@@ -65,9 +65,17 @@ export const LoremTable = () => {
                     >
                       <Server color="#1774de" size={20} />
                     </Circle>
-                    <Text fontSize="clamp(0.75rem, 2vw, 0.875rem)" minWidth="0">
-                      {item.name}
-                    </Text>
+                    <Box>
+                      <Text
+                        fontSize="clamp(0.75rem, 2vw, 0.875rem)"
+                        minWidth="0"
+                      >
+                        {item.name}
+                      </Text>
+                      <Text fontSize="9.45px" color="text">
+                        {item.ip}
+                      </Text>
+                    </Box>
                   </Flex>
                 </Table.Cell>
                 <Table.Cell textAlign="end">
@@ -76,7 +84,7 @@ export const LoremTable = () => {
                     rounded={20}
                     justifyContent="center"
                     px={3}
-                    py={2}
+                    py={1}
                     width="fit-content"
                     ml="auto"
                   >

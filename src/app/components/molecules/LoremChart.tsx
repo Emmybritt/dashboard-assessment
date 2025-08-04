@@ -1,12 +1,6 @@
 "use client";
 import { loremImg, loremTreeNode } from "@/app/datas/dummydatas";
-import {
-  Box,
-  Flex,
-  For,
-  Grid,
-  Heading
-} from "@chakra-ui/react";
+import { Box, Flex, For, Grid, Heading } from "@chakra-ui/react";
 import Image from "next/image";
 import { css } from "../../../../styled-system/css";
 import { Tree } from "./Tree";
@@ -17,13 +11,12 @@ const LoremChart = () => {
       <Heading as="h2" mb={3} color="success">
         Lorem Lorem Lorem
       </Heading>
-      <Grid width="100%" rounded={20} p={2} bg="gridCard">
+      <Grid width="100%" rounded={20} bg="gridCard">
         <Box
           maxWidth={"100%"}
           overflowX="scroll"
           p={2}
           m={"auto"}
-          borderBottomWidth={1}
           className={css({
             display: "flex",
             alignItems: "center",
@@ -32,6 +25,7 @@ const LoremChart = () => {
         >
           <Tree node={loremTreeNode} />
         </Box>
+        <hr className={css({ ml: 5, mr: 5 })} />
         <Flex mt={2}>
           <For each={loremImg}>
             {(img, i) => (
