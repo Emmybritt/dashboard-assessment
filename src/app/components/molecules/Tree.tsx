@@ -6,9 +6,10 @@ interface TreeProps {
   node: TreeNode;
   level?: number;
   isLast?: boolean;
+  ip?: string;
 }
 
-export const Tree = ({ node, level = 0 }: TreeProps) => {
+export const Tree = ({ node, level = 0, ip }: TreeProps) => {
   const hasChildren = node.children && node.children.length > 0;
 
   return (
@@ -30,6 +31,9 @@ export const Tree = ({ node, level = 0 }: TreeProps) => {
           <Box textAlign="center">
             {node.icon}
             <Text fontSize="xs">{node.title}</Text>
+            <Text fontSize="9.45px" lineHeight={1}>
+              {ip && ip}
+            </Text>
           </Box>
         </Flex>
 
@@ -49,6 +53,7 @@ export const Tree = ({ node, level = 0 }: TreeProps) => {
                   node={child}
                   level={level + 1}
                   isLast={index === node.children.length - 1}
+                  ip={child.ip}
                 />
               ))}
             </Flex>

@@ -11,7 +11,7 @@ const LoremChart = () => {
       <Heading as="h2" mb={3} color="success">
         Lorem Lorem Lorem
       </Heading>
-      <Grid width="100%" rounded={20} bg="gridCard">
+      <Grid width="100%" rounded={20} bg="gridCard" py={3}>
         <Box
           maxWidth={"100%"}
           overflowX="scroll"

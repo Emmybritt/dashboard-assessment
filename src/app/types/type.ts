@@ -3,4 +3,5 @@ export interface TreeNode {
   title: string;
   icon: React.ReactNode;
   children: TreeNode[];
+  ip?: string;
 }

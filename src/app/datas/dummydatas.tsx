@@ -113,6 +113,7 @@ export const loremTreeNode: TreeNode = {
 
               id: "9861f3c5-d268-464e-8366-7db80f0c670f",
               children: [],
+              ip: "192.168.1.1",
             },
             {
               title: "Loremipsumdolorsit002",
@@ -127,6 +128,7 @@ export const loremTreeNode: TreeNode = {
               ),
               id: "3e92b0e1-8234-4bc7-906b-062bfbcd6a45",
               children: [],
+              ip: "192.168.1.2",
             },
           ],
           id: "d4e08d33-fd90-4497-a34f-64eaf9dfc18b",
